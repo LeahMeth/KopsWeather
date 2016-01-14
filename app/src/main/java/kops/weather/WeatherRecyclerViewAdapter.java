@@ -51,7 +51,7 @@ public class WeatherRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
         else{
             ForecastWeatherViewHolder forecastHolder = (ForecastWeatherViewHolder) holder;
             forecastHolder.bind(new ForecastWeather().getList()[position]);
-        }
+        } 
     }
 
     @Override
