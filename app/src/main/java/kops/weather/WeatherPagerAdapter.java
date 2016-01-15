@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 public class WeatherPagerAdapter extends PagerAdapter {
 
-    WeatherPagerAdapter weatherPagerAdapter;
+    ForecastWeather forecastWeather;
 
-    public WeatherPagerAdapter(WeatherPagerAdapter weatherPagerAdapter) {
-        this.weatherPagerAdapter = stuff;
+    public WeatherPagerAdapter(ForecastWeather forecastWeather) {
+        this.forecastWeather = forecastWeather;
     }
 
     @Override
@@ -26,7 +26,7 @@ public class WeatherPagerAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return stuff.length;
+        return 16;
     }
 
     @Override

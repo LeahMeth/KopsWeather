@@ -34,7 +34,7 @@ public class ForecastWeatherViewHolder extends RecyclerView.ViewHolder {
         min.setText(String.valueOf((int) currentWeather.getMin()));
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE");
-        day.setText(dateFormat.format(currentWeather.get));
+        day.setText(dateFormat.format(currentWeather));
 
     }
 }

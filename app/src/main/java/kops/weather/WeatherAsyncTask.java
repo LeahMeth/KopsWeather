@@ -44,7 +44,7 @@ public class WeatherAsyncTask extends AsyncTask {
     }
 
 
-    @Override
+   // @Override
     protected void onPostExecute(ForecastWeather forecastWeather) {
         super.onPostExecute(forecastWeather);
         WeatherPagerAdapter weatherPagerAdapter = new WeatherPagerAdapter(forecastWeather);
