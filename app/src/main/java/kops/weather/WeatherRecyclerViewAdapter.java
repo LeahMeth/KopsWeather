@@ -19,23 +19,21 @@ public class WeatherRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
 
     @Override
     public int getItemViewType(int position) {
-        if (position == 0){
+        if (position == 0) {
             return 0;
-        }
-        else{
+        } else {
             return position;
         }
     }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        if (viewType == 0){
+        if (viewType == 0) {
             View view = LayoutInflater.from(parent.getContext()).
                     inflate(R.layout.weather_pager_item, parent, false);
             view.setMinimumHeight(parent.getMinimumHeight());
             return new CurrentWeatherViewHolder(view, viewType);
-        }
-        else{
+        } else {
             View view = LayoutInflater.from(parent.getContext()).
                     inflate(R.layout.forecast_list_item, parent, false);
             return new ForecastWeatherViewHolder(view, viewType);
@@ -44,11 +42,10 @@ public class WeatherRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        if(position == 0){
+        if (position == 0) {
             CurrentWeatherViewHolder currHolder = (CurrentWeatherViewHolder) holder;
             currHolder.bind(currHolder);
-        }
-        else{
+        } else {
             ForecastWeatherViewHolder forecastHolder = (ForecastWeatherViewHolder) holder;
             forecastHolder.bind(new ForecastWeather().getList()[position]);
         }

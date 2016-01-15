@@ -5,6 +5,7 @@ public class Temp {
     private double min;
     private double max;
 
+
     public double getMax() {
         return max;
     }

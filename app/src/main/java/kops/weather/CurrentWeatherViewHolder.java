@@ -29,15 +29,15 @@ public class CurrentWeatherViewHolder extends RecyclerView.ViewHolder {
         this.addCity = (Button) itemView.findViewById(R.id.addLocation);
 
 
-
     }
 
-    public void bind(CurrentWeather currentWeather){
+    public void bind(CurrentWeather currentWeather) {
         city.setText(currentWeather.getName());
         max.setText(String.valueOf((int) currentWeather.getMax()));
         min.setText(String.valueOf((int) currentWeather.getMin()));
         description.setText(currentWeather.getDescription());
-        temp.setText(String.valueOf((int)currentWeather.getTemp()));
+        temp.setText(String.valueOf((int) currentWeather.getTemp()));
+
         addCity.setText("Add a City");
         /*addCity.setOnClickListener(new OnClickListener() {
             @Override
@@ -45,8 +45,6 @@ public class CurrentWeatherViewHolder extends RecyclerView.ViewHolder {
 
             }
         }); */
-
-
 
 
     }

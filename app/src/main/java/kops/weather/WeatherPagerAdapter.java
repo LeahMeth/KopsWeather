@@ -24,6 +24,7 @@ public class WeatherPagerAdapter extends PagerAdapter {
         return view;
     }
 
+
     @Override
     public int getCount() {
         return 16;

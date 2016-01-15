@@ -17,6 +17,8 @@ public class CurrentWeather {
 
     public double getMin() {
         return main.getMin();
+
+
     }
 
     public double getTemp() {

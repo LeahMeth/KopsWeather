@@ -7,15 +7,15 @@ public class Main {
     private double temp_min;
     private double temp_max;
 
-    public double getTemp(){
+    public double getTemp() {
         return this.temp;
     }
 
-    public double getMin(){
+    public double getMin() {
         return this.temp_min;
     }
 
-    public double getMax(){
+    public double getMax() {
         return this.temp_max;
     }
 

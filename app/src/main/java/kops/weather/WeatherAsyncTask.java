@@ -20,7 +20,7 @@ public class WeatherAsyncTask extends AsyncTask {
     private ViewPager viewPager;
     private ForecastWeather forecastWeather;
 
-    public WeatherAsyncTask(ViewPager viewPager){
+    public WeatherAsyncTask(ViewPager viewPager) {
         this.viewPager = viewPager;
     }
 
@@ -36,15 +36,14 @@ public class WeatherAsyncTask extends AsyncTask {
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             InputStream in = connection.getInputStream();
             forecastWeather = gson.fromJson(new InputStreamReader(in), ForecastWeather.class);
-        }catch (IOException ex){
+        } catch (IOException ex) {
             ex.printStackTrace();
         }
 
         return forecastWeather;
     }
 
-
-   // @Override
+    // @Override
     protected void onPostExecute(ForecastWeather forecastWeather) {
         super.onPostExecute(forecastWeather);
         WeatherPagerAdapter weatherPagerAdapter = new WeatherPagerAdapter(forecastWeather);

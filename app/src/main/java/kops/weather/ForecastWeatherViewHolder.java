@@ -16,7 +16,6 @@ public class ForecastWeatherViewHolder extends RecyclerView.ViewHolder {
     private TextView day;
 
 
-
     public ForecastWeatherViewHolder(View itemView) {
         super(itemView);
 
@@ -25,10 +24,9 @@ public class ForecastWeatherViewHolder extends RecyclerView.ViewHolder {
         this.day = (TextView) itemView.findViewById(R.id.day);
 
 
-
     }
 
-    public void bind(CurrentWeather currentWeather){
+    public void bind(CurrentWeather currentWeather) {
 
         max.setText(String.valueOf((int) currentWeather.getMax()));
         min.setText(String.valueOf((int) currentWeather.getMin()));

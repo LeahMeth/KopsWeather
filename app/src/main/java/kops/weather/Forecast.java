@@ -6,6 +6,7 @@ public class Forecast {
     private Temp temp;
     private Weather[] weather;
 
+
     public Temp getTemp() {
         return this.temp;
     }
@@ -14,3 +15,4 @@ public class Forecast {
         return this.weather;
     }
 }
+
