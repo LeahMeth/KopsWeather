@@ -32,7 +32,8 @@ public class WeatherAsyncTask extends AsyncTask {
                 .create();
 
         try {
-            URL url = new URL("");
+            URL url = new URL("http://api.openweathermap.org/data/2.5/forecast/daily?zip=11367" +
+                    "&appid=4da4cafcdfe73ceae119f0c619ab0dfa&units=imperial&cnt=16");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             InputStream in = connection.getInputStream();
             forecastWeather = gson.fromJson(new InputStreamReader(in), ForecastWeather.class);
