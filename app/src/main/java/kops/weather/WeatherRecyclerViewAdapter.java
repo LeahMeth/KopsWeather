@@ -32,11 +32,11 @@ public class WeatherRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
             View view = LayoutInflater.from(parent.getContext()).
                     inflate(R.layout.weather_pager_item, parent, false);
             view.setMinimumHeight(parent.getMinimumHeight());
-            return new CurrentWeatherViewHolder(view, viewType);
+            return new CurrentWeatherViewHolder(view);
         } else {
             View view = LayoutInflater.from(parent.getContext()).
                     inflate(R.layout.forecast_list_item, parent, false);
-            return new ForecastWeatherViewHolder(view, viewType);
+            return new ForecastWeatherViewHolder(view);
         }
     }
 
@@ -44,7 +44,7 @@ public class WeatherRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if (position == 0) {
             CurrentWeatherViewHolder currHolder = (CurrentWeatherViewHolder) holder;
-            currHolder.bind(currHolder);
+            currHolder.bind(new ForecastWeather().getList()[0]);
         } else {
             ForecastWeatherViewHolder forecastHolder = (ForecastWeatherViewHolder) holder;
             forecastHolder.bind(new ForecastWeather().getList()[position]);
